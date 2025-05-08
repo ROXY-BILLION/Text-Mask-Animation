@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mask Moving Animation</title>
+    <link rel="stylesheet" href="style29.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="text">Roxy Billion Academy</div>
+    <script>
+      $(document).ready(function(){
+        $(document).mousemove(function(p){
+            var cursorX = p.pageX;
+            var cursorY = p.pageY;
+            var tranX = ((7 * cursorX) / 570) + 40;
+            var tranY = ((7 * cursorY) / 570) + 40;
+            $('.text').css({
+                "background-position": tranX + "%" + tranY + "%"
+            });
+        });
+      });
+    </script>
+</body>
+</html>
